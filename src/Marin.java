@@ -35,8 +35,17 @@ public  class Marin  implements Serializable {
 
 	@XmlElement
 	private String prenom;
+	
+	@XmlElement
+	private int age;
 
 
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
 	public String getNom() {
 		return nom;
 	}
@@ -53,4 +62,11 @@ public  class Marin  implements Serializable {
 	public Long getId() {
 		return id;
 	}
+	@Override
+	public String toString() {
+		return "Marin [id=" + id + ", nom=" + nom + ", prenom=" + prenom
+				+ ", age=" + age + "]";
+	}
+	
+
 }
